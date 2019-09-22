@@ -11,4 +11,4 @@ Documentation for libraries or frameworks used
 * [PUG](https://pugjs.org/api/getting-started.html)
 * [Express](https://expressjs.com/)
 
-![Good Luck!](Assigment-0/pugsplosion.gif)
+![Good Luck!](https://66.media.tumblr.com/129887d16b45dd70d07d068171bd3d99/tumblr_osk2g0B3La1tiivhqo1_400.gif)
