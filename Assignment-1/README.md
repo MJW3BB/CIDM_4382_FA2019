@@ -1,45 +1,28 @@
-# gettingMean-2
-# Getting MEAN Second Edition application code
+# Starting Out with Node, Express, and Pug
 
-This is the code for the sample 'Loc8r' application that is built through the course of the book Getting MEAN Second Edition.
+It is imperative that you work through these chapters methodically.  Among the things you'll learn are:
 
-Getting MEAN Second Edition is published by Manning, and teaches readers how to develop web applications end-to-end using the MEAN stack with Node 10 and Angular 6. It is currently in early access through the MEAP program, with new chapters being released regularly.
+    Installing Node and NPM
+    Installing Express
+    Utilizing Pug
+    Transforming the basic Express project template into an MVC template
+    Creating Pug template views
+    Creating controllers to work with routing and logic
+    What does MVC mean?
+    Using Git (and for us, Github)
+    Deploying to Heroku
+    Tasks
 
-> Note: if you have the First Edition of the book using Node 4 and Angular 1 you need the [First Edition code](https://github.com/simonholmes/getting-MEAN/) instead.
+Near the end of chapter four, Simon shows us two important things:
 
-## The application at various stages
+    how to work with mixins and includes to develop reusable aspects of your Pug templates
+    how to work with data within your Pug template
+    What we need to do is modify Simon's code to create a different list of items (rather than locations for wifi).  Here is what you need to do:
 
-There will be named branches for the various states of the code throughout the book:
-
-* `master` **Chapter 3 start**: A blank Express 4.16.3 project
-* `chapter-03` **Chapter 3 end**: Creating and setting up a MEAN project
-* `chapter-04-views` **Chapter 4 mid-point**: The data is hard coded into views
-* `chapter-04` **Chapter 4 end**: Building a static site with Node.js and Express
-* `chapter-05` **Chapter 5**: Building a data model with MongoDB and Mongoose
-* `chapter-06` **Chapter 6**: Writing a REST API: Exposing your MongoDB database to the application
-* `chapter-07` **Chapter 7**: Consuming a REST API: Using an API from inside Express
-* `chapter-08` **Chapter 8**: Creating an Angular application with TypeScript
-* `chapter-09` **Chapter 9**: Building a Single Page Application with Angular
-* `chapter-10` **Chapter 10**: Building a Single Page Application with Angular: The next level
-* `chapter-11` **Chapter 11**: Authenticating users, managing sessions and securing APIs
-* `chapter-12` **Chapter 12**: Using an authentication API in Angular applications
-
-## Get the code
-
-Pre-requisites:
-
-* Git installed
-* A command line interface capable of running Git commands
-* Node v6 installed (don't use 7 as it is unstable)
-
-To get the code for a specific branch:
-
-`$ git clone -b branch-name https://github.com/simonholmes/getting-MEAN-2.git`
-
-Then change into the folder the git clone command will create:
-
-`$ cd getting-MEAN-2`
-
-And finally install the dependencies:
-
-`npm install`
+Obtain Simon's chapter 4 code and git pull or download it.
+    Modify the code to include an additional list page of three (3) select pizza restaurants in Amarillo and/or Canyon (this means another tab in the navigation for the pizza places)
+    Modify the code to develop attributes for each restaurant (they will be different than what Simon uses for locations).
+    Modify and/or Copy and Modify the layout.pug, location-info.pug, and locations-list.pug files to accomplish these tasks.
+    Since Simon is using a 3rd-party Bootstrap theme, you should do so as well.  The results may not be what you expect, but I want you to experiment
+    Create an additional mixin that will also shade the background of each item in the locations-list for your pizza restaurants different colors depending on their rating.
+    What to Submit
