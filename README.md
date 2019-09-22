@@ -4,7 +4,7 @@ Code uploaded as assignments for class (homework).
 
 ## Built With
 
-Most assignments will require the use of a few tools
+Most assignments will require the use of a few tools.
 Documentation for libraries or frameworks used
 
 * [Node Package Manager](https://www.npmjs.com/package/express)
@@ -12,3 +12,7 @@ Documentation for libraries or frameworks used
 * [Express](https://expressjs.com/)
 
 ![Good Luck!](https://66.media.tumblr.com/129887d16b45dd70d07d068171bd3d99/tumblr_osk2g0B3La1tiivhqo1_400.gif)
+
+### Adding tools to the project
+
+'
