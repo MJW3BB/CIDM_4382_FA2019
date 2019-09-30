@@ -1,0 +1,42 @@
+extends layout
+
+block content
+
+  - let words = ["one", "two", "three"];
+  // below is a block-level unbuffered code block - https://github.com/pugjs/pug/issues/502#issuecomment-137893041
+  -
+    let negative_traits = [
+      "newfangled","old","young","green","candid","new","innocent","considerate",
+    ];
+  - 
+    let positive_traits = [
+      "instinctive","unreal","careworn","magic","magical","sorcerous","wizard","witching",
+    ];
+
+  div.container
+    div.jumbotron.jumbotron-fluid
+      h1= title
+      p Welcome to #{title}
+      a(href="http://localhost:3000") Home
+  
+  div.container
+    div.row
+      h2.col-3 Entry Form
+  div.container
+    form(method="POST" action="")
+      div.form-group.col-md-3
+        label(for='ptraits') Option 1:
+        select#ptraits.form-contol(name="ptraits")
+          each trait in positive_traits
+            option= trait
+      div.form-group.col-md-3
+        label(for='ntraits') Option 2:
+        select#ntraits.form-contol(name="ntraits")
+          each trait in negative_traits
+            option= trait
+      button.btn.btn-outline-primary(type='submit') Submit
+      
+  if errors
+    ul
+      for error in errors
+        li!= error.msg
