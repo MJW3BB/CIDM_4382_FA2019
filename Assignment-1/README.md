@@ -30,3 +30,4 @@ Obtain Simon's chapter 4 code and git pull or download it.
     Since Simon is using a 3rd-party Bootstrap theme, you should do so as well.  The results may not be what you expect, but I want you to experiment.
 
     Create an additional mixin that will also shade the background of each item in the locations-list for your pizza restaurants different colors depending on their rating.
+    
