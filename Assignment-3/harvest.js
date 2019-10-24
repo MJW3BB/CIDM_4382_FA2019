@@ -68,7 +68,7 @@ const clientSchema = new Schema({
     heading: String,
     altitude: String,
     groundspeed: String,        
-    /*Position: [{
+    /*osition: [{
         timestamp: Date,
         frequency: String,
         latitude: String,
@@ -110,26 +110,34 @@ const clientSchema = new Schema({
 
 
 const IsInARTCC = (client) => {
-
+    //list of airpots
+    /*
+    take a client
+    loop through the list and compare to the client:
+        is the origin in the list? then save
+        is the destination in the list? then save
+    */
     //use this method for filtering
+    return true;
 }
 
 
 const writeClientModelListToPersist = (client_list) => {
 
-   // const password = process.env.MONGODB_ATLAS_PWD;
+    const uri = process.env.MONGODB_ATLAS_URL;
 
     //this example uses ES6 template literals for string interpolation: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Template_literals
-    const uri = process.env.MONGODB_ATLAS_URL;
-    mongoose.connect(uri, {useNewUrlParser: true, useUnifiedTopology: true});
+
+    mongoose.connect(uri, {useNewUrlParser: true, useUnifiedTopology: true})
+            .catch(err => console.log(err));
 
     const Client = mongoose.model('Client', clientSchema);    
 
     //insert the most recent list - https://mongoosejs.com/docs/api/model.html#model_Model.insertMany
-    Client.insertMany(client_list, (err, docs) => {
+    var promise = Client.insertMany(client_list, (err, docs) => {
         console.log(`INSERTED: ${client_list.length} records`);
-    })
-
+        console.log(err);
+    });
 }
 
 const createClientModel = (client) => {
@@ -322,7 +330,7 @@ const parseVATSIM = (data) => {
 
         parts = element.split(':');
 
-        //call to parseClient here
+        // call to parseClient here
         let client = parseClient(parts);
 
         // callsign:
@@ -334,9 +342,11 @@ const parseVATSIM = (data) => {
         
         if(!client.callsign.startsWith(";") && !client.callsign.startsWith(" ") && start){
 
-            //add to list
-            clientModelList.push(createClientModel(client));
-            //console.log(`Callsign: ${client.callsign}`);
+            //do filtering here
+            if(IsInARTCC(client)){
+                //add to list
+                clientModelList.push(createClientModel(client));
+            }
         } 
 
         if(client.callsign.startsWith("!CLIENTS")){
