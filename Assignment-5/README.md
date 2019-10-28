@@ -8,11 +8,11 @@ The objective here is to provide a REST api of your own that closely mimics the 
 
 These will only be for Flights and not controllers, for now:
 
-* [Arrived]
-* [Departed]
-* [Enroute]
-* [FlightInfo]
-* [Scheduled]
-* [A_Word_about_the_Scheduled_Method]
+* Arrived
+* Departed
+* Enroute
+* FlightInfo
+* Scheduled
+* A word about the scheduled method
 
 In order to implement the Scheduled method, you'll need to accommodate an entirely new entity from the !PREFILE: section of the data file. The entails creating a new Mongoose Schema as the fields are slightly different from a Flight.
