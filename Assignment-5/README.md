@@ -16,3 +16,5 @@ These will only be for Flights and not controllers, for now:
 * A word about the scheduled method
 
 In order to implement the Scheduled method, you'll need to accommodate an entirely new entity from the !PREFILE: section of the data file. The entails creating a new Mongoose Schema as the fields are slightly different from a Flight.
+
+![Good Luck!](https://media1.tenor.com/images/c0c2264911d8cd4a688acd0542240f95/tenor.gif?itemid=7603564)
