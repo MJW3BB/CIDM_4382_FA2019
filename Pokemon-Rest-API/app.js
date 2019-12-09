@@ -13,6 +13,7 @@ app.use("/1", routePokedex);
 
 app.get("/", (req, res) => {
     res.send("Welcome to the Pokedex!")
+    // res.sendFile("");
 });
 
 // Connect to DB
