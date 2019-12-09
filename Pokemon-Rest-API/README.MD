@@ -13,4 +13,19 @@
 * npm i mongoose
 * npm i nodemon
 * npm i dotenv
+* npm start
 
+## Accessing mongoDB ##
+* goto localhost:5000/1
+* use Postman to make any GET, POST, PATCH, DELETE requests
+* nodemon should refresh localhost:5000/1 when changes are applied and you can see the contents of the DB
+
+## Query Structure ##
+
+* We attempting to GET, POST, PATCH, DELETE requests use the following structure
+
+{
+  "name":"POKEMONNAMEGOESHERE",
+  "type":"POKEMONTYPEGOESHERE",
+  "ability":"POKEMONABILITYNAMEGOESHERE"
+}
