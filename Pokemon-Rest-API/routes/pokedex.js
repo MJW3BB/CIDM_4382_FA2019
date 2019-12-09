@@ -2,6 +2,7 @@ const express = require("express");
 const router = express.Router();
 const Pokemon = require("../models/Pokemon");
 
+// get the database connection
 router.get("/", async (req, res) => {
     try {
       const pokedex = await Pokemon.find();
@@ -10,7 +11,7 @@ router.get("/", async (req, res) => {
       res.status(500).json({ message: err });
     }
 });
-
+// get all pokemon in the collection based on ID
 router.get("/:pokemonId", async (req, res) => {
     try {
       const id = req.params.pokemonId;
@@ -24,7 +25,7 @@ router.get("/:pokemonId", async (req, res) => {
       res.status(500).json({ message: err });
     }
 });
-
+// post new pokemon
 router.post("/", async (req, res) => {
     const mypokemon = new Pokemon({
       name: req.body.name,
@@ -42,7 +43,7 @@ router.post("/", async (req, res) => {
       res.status(500).json({ message: err });
     }
 });
-
+// update records
 router.patch("/:pokemonId", async (req, res) => {
     try {
       const id = req.params.pokemonId;
@@ -57,7 +58,7 @@ router.patch("/:pokemonId", async (req, res) => {
       res.status(500).json({ message: err });
     }
 });
-
+// delete records
 router.delete("/:pokemonId", async (req, res) => {
     try {
       const id = req.params.pokemonId;

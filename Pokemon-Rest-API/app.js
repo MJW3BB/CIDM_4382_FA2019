@@ -20,6 +20,6 @@ mongoose.connect(process.env.DB_CONNECTION,
     { useNewUrlParser: true, useUnifiedTopology: true }, () =>
     console.log("Credentials Verified - Connected to mongoDB")
 );
-
+// Specify port preference
 const PORT = process.env.PORT || 5000;
 app.listen(PORT, () => console.log(`Listening on port ${PORT}`));

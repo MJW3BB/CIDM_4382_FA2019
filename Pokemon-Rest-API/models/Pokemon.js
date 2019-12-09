@@ -1,5 +1,5 @@
 const mongoose = require("mongoose");
-
+// Create a schema for all pokemon in the DB
 const PokemonSchema = mongoose.Schema({
     name: {
         type: String,
@@ -14,5 +14,5 @@ const PokemonSchema = mongoose.Schema({
         required: true 
             }
 });
-
+// export the schema
 module.exports = mongoose.model("Pokemons", PokemonSchema);
