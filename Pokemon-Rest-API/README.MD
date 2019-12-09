@@ -22,7 +22,7 @@
 
 ## Query Structure ##
 
-* We attempting to GET, POST, PATCH, DELETE requests use the following structure
+* We attempting to GET, POST, PATCH, DELETE requests use the following structure as a RAW JSON input
 
 {
   "name":"POKEMONNAMEGOESHERE",
