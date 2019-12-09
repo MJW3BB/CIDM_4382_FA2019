@@ -4,7 +4,7 @@ const Pokemon = require("../models/Pokemon");
 
 // get the database connection
 // https://caolan.github.io/async/v3/
-router.get("/", async (req, res) => { // https://caolan.github.io/async/v3/
+router.get("/", async (req, res) => {
     try {
       const pokedex = await Pokemon.find();
       res.status(200).json(pokedex);
