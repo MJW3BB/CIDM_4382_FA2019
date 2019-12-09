@@ -1,3 +1,4 @@
+// tutorial to create schema: https://www.youtube.com/watch?v=Us-JwsZtAwA
 const mongoose = require("mongoose");
 // Create a schema for all pokemon in the DB
 const PokemonSchema = mongoose.Schema({

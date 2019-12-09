@@ -3,7 +3,8 @@ const router = express.Router();
 const Pokemon = require("../models/Pokemon");
 
 // get the database connection
-router.get("/", async (req, res) => {
+// https://caolan.github.io/async/v3/
+router.get("/", async (req, res) => { // https://caolan.github.io/async/v3/
     try {
       const pokedex = await Pokemon.find();
       res.status(200).json(pokedex);
@@ -12,6 +13,9 @@ router.get("/", async (req, res) => {
     }
 });
 // get all pokemon in the collection based on ID
+
+// Adding all CRUD functions: https://www.youtube.com/watch?v=oEUfvouGxpY&t=242s
+
 router.get("/:pokemonId", async (req, res) => {
     try {
       const id = req.params.pokemonId;
